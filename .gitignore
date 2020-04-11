@@ -11,8 +11,8 @@ node_modules
 # OSX
 *.DS_Store
 
-# Builds
-bin
+# Builds - adding it to VCS so that it can directly be installed from github
+#bin
 
 # Logs
 *.log
