@@ -1,3 +1,54 @@
+## Forked from [react-notify-toast](https://github.com/jesusoterogomez/react-notify-toast) to add support for custom style
+
+![Toast Demo](./demo/react-notify-toast.gif)
+
+### How to install
+
+`yarn add react-notify-toast@ssh://git@github.com:goibibo-labs/react-notify-toast.git`
+
+### Sample Usage
+
+You need to follow original usage instructions.
+Apart from that, you can pass custom style in following way-
+
+```
+import { notify } from 'react-notify-toast';
+
+const showToast = notify.createShowQueue();
+const colorOptions = {
+  background: '#303333',
+  text: '#fff'
+};
+const transformStyleRule = 'translateY(calc(100% + 16px))';
+const styleObject = {
+  container: {
+    top: '',
+    bottom: '16px',
+    transform: transformStyleRule,
+    msTransform: transformStyleRule,
+    WebkitTransform: transformStyleRule,
+    OTransform: transformStyleRule,
+    MozTransform: transformStyleRule
+  },
+  content: {
+    borderRadius: '4px'
+  },
+  show: {},
+  hide: {
+    transform: transformStyleRule,
+    msTransform: transformStyleRule,
+    WebkitTransform: transformStyleRule,
+    OTransform: transformStyleRule,
+    MozTransform: transformStyleRule
+  }
+};
+```
+
+```
+const message = 'Hello World!';
+showToast(message, 'custom', duration, colorOptions, styleObject);
+```
+
 # Toast Notifications for React.js. [![Build Status](https://travis-ci.org/jesusoterogomez/react-notify-toast.svg?branch=master)](https://travis-ci.org/jesusoterogomez/react-notify-toast)
 
 <p align="center"> 
